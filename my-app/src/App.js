@@ -1,43 +1,87 @@
 import './App.css';
-import { useEffect, useRef } from 'react';
+import {useEffect, useRef} from 'react';
 
 
 function App() {
-  
-  const cardcontainerRef = useRef();
-  const challenges = [
-    'Bedank een parkeerwacht voor zijn toevoeging aan de maatschappij.',
-    'Bestel gerecht 88 bij de Chinees en eet het op.',
-    '¥ Blaas een ballon op totdat hij knapt.',
-    'Pionier een keuken.',
-    'Doe een Big Mac in één keer in je mond en eet hem op.',
-    'Doe een goede daad.',
-    '¥ Draai achter elkaar 88 rondjes in positieve richting.',
-    'Drink een glas melk uit een koe.',
-    'Bel 06-???? ???? voor een sportieve opdracht (de staf wordt gebeld).',
-    'Drink uit een prijs.',
-    'Prijs drinken aan.',
-    'Eet een Bosche bol in Den Bosch.',
-    'Eet een hele citroen op (zonder schil) of eet een hele citroenschil.',
-    '¥ Eet X rauwe eieren (X is het aantal personen in je team).',
-    'Eet zo veel mogelijk Ferrero Rochers in één minuut (het wereldrecord staat op 8).',
-    'Fotografeer een vlieg.',
-    'Ga in een rondje staan en geef zo een bitchslap door.',
-    'Ga in een waterfiets.',
-    'Bel 06-???? ???? voor een grote opdracht.',
-    'Ga naar de AH XL.',
-    'Ga naar de lijnmarkt.',
-    'Ga naar de Remiafabriek.',
-    'Ga naar de Smickel',
-    'Ga naar Lutjebroek.',
-    'Ga onder de boom in de hortus van het Stedelijk in Haarlem zitten.',
-    'Ga op de foto met iemand in klederdracht.',
-    '€ Geef de organisatie een taart.',
-    'Glijd met z\'n allen van een trapleuning.',
-    'Bel de grootste priemfactor in het getal 617043367.',
-    'Haal 4 plakjes worst bij de slager.',
-    'Haal een te-laatbriefje op een middelbare school.',
-    'Help een marktkoopman.',
+
+    const cardcontainerRef = useRef();
+    const challenges = [
+        {
+            title: 'Bedank een parkeerwacht voor zijn toevoeging aan de maatschappij.',
+            points: 5
+        },
+        {
+            title: 'Bestel gerecht 88 bij de Chinees en eet het op.',
+            points: 2
+        },
+        {
+            title: '¥ Blaas een ballon op totdat hij knapt.',
+            points: 1
+        },
+        {
+            title: 'Pionier een keuken.',
+            points: 2
+        },
+        {
+            title: 'Doe een Big Mac in één keer in je mond en eet hem op.',
+            points: 5
+        },
+        {
+            title: 'Doe een goede daad.',
+            points: 4
+        },
+        {
+            title: '¥ Draai achter elkaar 88 rondjes in positieve richting.',
+            points: 3
+        },
+        {
+            title: 'Drink een glas melk uit een koe.',
+            points: 1
+        },
+        {
+            title: 'Prijs drinken aan.',
+            points: 1
+        },
+        {
+            title: 'Bel 06-???? ???? voor een sportieve opdracht (de staf wordt gebeld).',
+            points: 1
+        },
+        {
+            title: 'Eet een Bosche bol in Den Bosch.',
+            points: 1
+        }
+    ];
+    // 'Bestel gerecht 88 bij de Chinees en eet het op.',
+    //     '¥ Blaas een ballon op totdat hij knapt.',
+    //     'Pionier een keuken.',
+    //     'Doe een Big Mac in één keer in je mond en eet hem op.',
+    //     'Doe een goede daad.',
+    //     '¥ Draai achter elkaar 88 rondjes in positieve richting.',
+    //     'Drink een glas melk uit een koe.',
+    //     'Bel 06-???? ???? voor een sportieve opdracht (de staf wordt gebeld).',
+    //     'Drink uit een prijs.',
+    //     'Prijs drinken aan.',
+    //     'Eet een Bosche bol in Den Bosch.',
+    //     'Eet een hele citroen op (zonder schil) of eet een hele citroenschil.',
+    //     '¥ Eet X rauwe eieren (X is het aantal personen in je team).',
+    //     'Eet zo veel mogelijk Ferrero Rochers in één minuut (het wereldrecord staat op 8).',
+    //     'Fotografeer een vlieg.',
+    //     'Ga in een rondje staan en geef zo een bitchslap door.',
+    //     'Ga in een waterfiets.',
+    //     'Bel 06-???? ???? voor een grote opdracht.',
+    //     'Ga naar de AH XL.',
+    //     'Ga naar de lijnmarkt.',
+    //     'Ga naar de Remiafabriek.',
+    //     'Ga naar de Smickel',
+    //     'Ga naar Lutjebroek.',
+    //     'Ga onder de boom in de hortus van het Stedelijk in Haarlem zitten.',
+    //     'Ga op de foto met iemand in klederdracht.',
+    //     '€ Geef de organisatie een taart.',
+    //     'Glijd met z\'n allen van een trapleuning.',
+    //     'Bel de grootste priemfactor in het getal 617043367.',
+    //     'Haal 4 plakjes worst bij de slager.',
+    //     'Haal een te-laatbriefje op een middelbare school.',
+    //     'Help een marktkoopman.',
     // 'Kijk een gegeven paard in de mond.',
     // 'Klim allemaal in een boom.',
     // 'Knip een kapper.',
@@ -94,11 +138,11 @@ function App() {
     // 'Fotografeer een mug of vlieg',
     // 'Kus een kikker.',
     // 'Geef een groepsknuffel met 15 personen.',
-  ];
-  useEffect(() => {
-    console.log(cardcontainerRef);
-    	cardcontainerRef.current.elements = challenges;
-  });
+
+    useEffect(() => {
+        console.log(cardcontainerRef);
+        cardcontainerRef.current.elements = challenges;
+    });
 
   return (
     <div className="App">

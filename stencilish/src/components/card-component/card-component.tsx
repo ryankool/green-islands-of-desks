@@ -15,7 +15,10 @@ export class CardComponent {
   /**
    * The challenge
    */
-  @Prop() challenge: string;
+  @Prop() challenge: {
+    title: string,
+    points: number
+  };
 
   private cardClicked() {
     this.frontfacing = !this.frontfacing;
@@ -31,7 +34,11 @@ export class CardComponent {
         }}
       >
         <div class="front face">{this.day}</div>
-        <div class="back face">{this.challenge}</div>
+        <div class="back face">
+          <div class="title-container">{this.challenge.title}</div>
+          <div class="points-container">{this.challenge.points}</div>
+          <button>Done!</button>
+        </div>
       </div>
     );
   }
