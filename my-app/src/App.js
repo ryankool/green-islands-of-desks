@@ -144,14 +144,11 @@ function App() {
         cardcontainerRef.current.elements = challenges;
     });
 
-    return (
-        < div
-    className = "App" >
-        < cards - container
-    ref = {cardcontainerRef} > < /cards-container>
-        < /div>
-)
-    ;
+  return (
+    <div className="App">
+      <cards-container ref={cardcontainerRef}></cards-container>
+    </div>
+  );
 }
 
 export default App;
