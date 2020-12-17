@@ -9,11 +9,30 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
   .card-grid {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    &:last-child {
-      grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  .button {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 1rem;
+    width: 100%;
+    height: 30px;
+    background: 
+  /* On "top" */ repeating-linear-gradient(45deg, transparent, transparent 10px, #235e6f 10px, #0f8a5f 20px),
+      /* on "bottom" */ linear-gradient(to bottom, #f5624d, #cc231e);
+
+    &:focus {
+      outline: 0;
+    }
+    &:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #f5624d;
+      transform: translateY(4px);
     }
   }
 
@@ -44,19 +63,16 @@
   }
 
   .face.back {
-
     transform: rotateY(180deg);
     color: white;
     text-align: center;
-    background-color: #34A65F;
+    background-color: #34a65f;
     border-radius: 1rem;
   }
   .face.front {
-    background-color: #F5624D;
+    background-color: #f5624d;
     color: #fff;
     text-align: center;
     border-radius: 1rem;
-
   }
 }
-

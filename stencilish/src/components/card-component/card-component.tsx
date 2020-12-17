@@ -40,7 +40,7 @@ export class CardComponent {
           <div class="card-grid">
             <div class="title-container">{this.challenge.title}</div>
             <div class="points-container">{this.challenge.points}</div>
-            <button>Done!</button>
+            <button class="button">Done!</button>
           </div>
         </div>
       </div>
