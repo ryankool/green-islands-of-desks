@@ -7,14 +7,14 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class CardsContainer {
 
-  @Prop() elements = ['one', 'two', 'three'];
+  @Prop() elements = [{ title: 'one', points: 3 }, { title: 'two', points: 2 }, { title: 'three', points: 2 }];
 
   render() {
     return (
       <Host>
         <div class="cards-container">
           {this.elements.map((value, index) => {
-            return <card-component day={index+1} challenge={value}></card-component>
+            return <card-component day={index + 1} challenge={value}></card-component>
           })}
         </div>
       </Host>

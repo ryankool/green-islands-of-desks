@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property   | Attribute | Description | Type       | Default                   |
-| ---------- | --------- | ----------- | ---------- | ------------------------- |
-| `elements` | --        |             | `string[]` | `['one', 'two', 'three']` |
+| Property   | Attribute | Description | Type                                   | Default                                                                                     |
+| ---------- | --------- | ----------- | -------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `elements` | --        |             | `{ title: string; points: number; }[]` | `[{ title: 'one', points: 3 }, { title: 'two', points: 2 }, { title: 'three', points: 2 }]` |
 
 
 ## Dependencies

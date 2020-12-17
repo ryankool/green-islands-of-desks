@@ -36,7 +36,7 @@ export class CardComponent {
         <div class="front face">{this.day}</div>
         <div class="back face">
           <div class="title-container">{this.challenge.title}</div>
-          <div class="points-container">{this.challenge.points}</div>
+          <div class="points-container">{this.challenge.points} points</div>
           <button>Done!</button>
         </div>
       </div>

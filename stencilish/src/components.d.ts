@@ -10,14 +10,17 @@ export namespace Components {
         /**
           * The challenge
          */
-        "challenge": string;
+        "challenge": {
+    title: string,
+    points: number
+  };
         /**
           * The day
          */
         "day": number;
     }
     interface CardsContainer {
-        "elements": string[];
+        "elements": { title: string; points: number; }[];
     }
 }
 declare global {
@@ -43,14 +46,17 @@ declare namespace LocalJSX {
         /**
           * The challenge
          */
-        "challenge"?: string;
+        "challenge"?: {
+    title: string,
+    points: number
+  };
         /**
           * The day
          */
         "day"?: number;
     }
     interface CardsContainer {
-        "elements"?: string[];
+        "elements"?: { title: string; points: number; }[];
     }
     interface IntrinsicElements {
         "card-component": CardComponent;

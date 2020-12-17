@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property    | Attribute   | Description   | Type     | Default     |
-| ----------- | ----------- | ------------- | -------- | ----------- |
-| `challenge` | `challenge` | The challenge | `string` | `undefined` |
-| `day`       | `day`       | The day       | `number` | `undefined` |
+| Property    | Attribute | Description   | Type                                 | Default     |
+| ----------- | --------- | ------------- | ------------------------------------ | ----------- |
+| `challenge` | --        | The challenge | `{ title: string; points: number; }` | `undefined` |
+| `day`       | `day`     | The day       | `number`                             | `undefined` |
 
 
 ## Dependencies
