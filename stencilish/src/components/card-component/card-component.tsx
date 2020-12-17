@@ -15,16 +15,17 @@ export class CardComponent {
   @Prop() day: number;
 
   /**
-   * The challenge
+   * The Points
    */
-  @Prop() challenge: {
-    points: number,
-    title: string
-  }
+  @Prop() challengePoints: number;
+
+  /**
+   * The Title
+   */
+  @Prop() challengeTitle: string;
 
   private cardClicked() {
     this.frontfacing = !this.frontfacing;
-    console.log(this.frontfacing);
   }
 
   render() {
@@ -38,8 +39,8 @@ export class CardComponent {
         <div class="front face">{this.day}</div>
         <div class="back face">
           <div class="card-grid">
-            <div class="title-container">{this.challenge.title}</div>
-            <div class="points-container">{this.challenge.points} points</div>
+            <div class="title-container">{this.challengeTitle}</div>
+            <div class="points-container">{this.challengePoints} points</div>
             <button class="button">Done!</button>
           </div>
         </div>

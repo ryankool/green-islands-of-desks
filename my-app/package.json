@@ -9,7 +9,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
-    "stencilish": "..\\stencilish\\stencilish-0.0.1.tgz",
+    "stencilish": "..\\\\stencilish\\\\stencilish-0.0.2.tgz",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

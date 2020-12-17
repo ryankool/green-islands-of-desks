@@ -8,12 +8,13 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CardComponent {
         /**
-          * The challenge
+          * The Points
          */
-        "challenge": {
-            points: number,
-            title: string
-        };
+        "challengePoints": number;
+        /**
+          * The Title
+         */
+        "challengeTitle": string;
         /**
           * The day
          */
@@ -28,13 +29,13 @@ declare global {
     }
     var HTMLCardComponentElement: {
         prototype: HTMLCardComponentElement;
-        new(): HTMLCardComponentElement;
+        new (): HTMLCardComponentElement;
     };
     interface HTMLCardsContainerElement extends Components.CardsContainer, HTMLStencilElement {
     }
     var HTMLCardsContainerElement: {
         prototype: HTMLCardsContainerElement;
-        new(): HTMLCardsContainerElement;
+        new (): HTMLCardsContainerElement;
     };
     interface HTMLElementTagNameMap {
         "card-component": HTMLCardComponentElement;
@@ -44,12 +45,13 @@ declare global {
 declare namespace LocalJSX {
     interface CardComponent {
         /**
-          * The challenge
+          * The Points
          */
-        "challenge"?: {
-            points: number,
-            title: string
-        };
+        "challengePoints"?: number;
+        /**
+          * The Title
+         */
+        "challengeTitle"?: string;
         /**
           * The day
          */

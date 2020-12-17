@@ -8,9 +8,9 @@ import { Component, Host, h, Prop } from '@stencil/core';
 export class CardsContainer {
 
   @Prop() elements = [
-    { title: "One", points: 2},
-    { title: "Two", points: 1},
-    {title: "Three", points: 1}
+    { title: "One", points: 2 },
+    { title: "Two", points: 1 },
+    { title: "Three", points: 1 }
   ];
 
   render() {
@@ -18,7 +18,8 @@ export class CardsContainer {
       <Host>
         <div class="cards-container">
           {this.elements.map((value, index) => {
-            return <card-component day={index + 1} challenge={value}></card-component>
+            console.log(value);
+            return <card-component day={index + 1} challenge-points={value.points} challenge-title={value.title}></card-component>
           })}
         </div>
       </Host>
