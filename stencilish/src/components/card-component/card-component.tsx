@@ -1,5 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
-
+import { Component, Prop, h, State } from '@stencil/core';
 
 @Component({
   tag: 'card-component',
@@ -7,6 +6,7 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class CardComponent {
+  @State() frontfacing = true;
   /**
    * The day
    */
@@ -17,16 +17,22 @@ export class CardComponent {
    */
   @Prop() challenge: string;
 
+  private cardClicked(e) {
+    this.frontfacing = !this.frontfacing;
+    console.log(this.frontfacing);
+  }
+
   render() {
     return (
-      <div class="card">
-        <div class="front">
-          {this.day}
-        </div>
-        <div class="back">
-          <p>{this.challenge}</p>
-        </div>
+      <div
+        class={'innercontainer ' + (this.frontfacing ? 'frontfacing' : 'backfacing')}
+        onClick={e => {
+          this.cardClicked(e);
+        }}
+      >
+        <div class="front face">{this.day}</div>
+        <div class="back face">{this.challenge}</div>
       </div>
-    )
+    );
   }
 }

@@ -12,7 +12,7 @@ export class CardsContainer {
   render() {
     return (
       <Host>
-        <div class="card-container">
+        <div class="cards-container">
           {this.elements.map((value, index) => {
             return <card-component day={index+1} challenge={value}></card-component>
           })}
