@@ -7,12 +7,24 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type     | Default     |
-| -------- | --------- | --------------- | -------- | ----------- |
-| `first`  | `first`   | The first name  | `string` | `undefined` |
-| `last`   | `last`    | The last name   | `string` | `undefined` |
-| `middle` | `middle`  | The middle name | `string` | `undefined` |
+| Property    | Attribute   | Description   | Type     | Default     |
+| ----------- | ----------- | ------------- | -------- | ----------- |
+| `challenge` | `challenge` | The challenge | `string` | `undefined` |
+| `day`       | `day`       | The day       | `number` | `undefined` |
 
+
+## Dependencies
+
+### Used by
+
+ - [cards-container](../cards-container)
+
+### Graph
+```mermaid
+graph TD;
+  cards-container --> card-component
+  style card-component fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

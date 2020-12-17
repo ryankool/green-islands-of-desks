@@ -17,7 +17,7 @@ export class CardComponent {
    */
   @Prop() challenge: string;
 
-  private cardClicked(e) {
+  private cardClicked() {
     this.frontfacing = !this.frontfacing;
     console.log(this.frontfacing);
   }
@@ -26,8 +26,8 @@ export class CardComponent {
     return (
       <div
         class={'innercontainer ' + (this.frontfacing ? 'frontfacing' : 'backfacing')}
-        onClick={e => {
-          this.cardClicked(e);
+        onClick={() => {
+          this.cardClicked();
         }}
       >
         <div class="front face">{this.day}</div>
