@@ -7,7 +7,11 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class CardsContainer {
 
-  @Prop() elements = ['one', 'two', 'three'];
+  @Prop() elements = [
+    { title: "One", points: 2},
+    { title: "Two", points: 1},
+    {title: "Three", points: 1}
+  ];
 
   render() {
     return (
