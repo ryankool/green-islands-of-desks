@@ -5,7 +5,9 @@ import { Component, Prop, h, State } from '@stencil/core';
   styleUrl: 'card-component.scss',
   shadow: true,
 })
+
 export class CardComponent {
+
   @State() frontfacing = true;
   /**
    * The day
@@ -16,9 +18,9 @@ export class CardComponent {
    * The challenge
    */
   @Prop() challenge: {
-    title: string,
-    points: number
-  };
+    points: number,
+    title: string
+  }
 
   private cardClicked() {
     this.frontfacing = !this.frontfacing;
@@ -35,9 +37,11 @@ export class CardComponent {
       >
         <div class="front face">{this.day}</div>
         <div class="back face">
-          <div class="title-container">{this.challenge.title}</div>
-          <div class="points-container">{this.challenge.points} points</div>
-          <button>Done!</button>
+          <div class="card-grid">
+            <div class="title-container">{this.challenge.title}</div>
+            <div class="points-container">{this.challenge.points} points</div>
+            <button class="button">Done!</button>
+          </div>
         </div>
       </div>
     );

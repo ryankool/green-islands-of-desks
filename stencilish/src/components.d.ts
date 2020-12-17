@@ -11,9 +11,9 @@ export namespace Components {
           * The challenge
          */
         "challenge": {
-    title: string,
-    points: number
-  };
+            points: number,
+            title: string
+        };
         /**
           * The day
          */
@@ -28,13 +28,13 @@ declare global {
     }
     var HTMLCardComponentElement: {
         prototype: HTMLCardComponentElement;
-        new (): HTMLCardComponentElement;
+        new(): HTMLCardComponentElement;
     };
     interface HTMLCardsContainerElement extends Components.CardsContainer, HTMLStencilElement {
     }
     var HTMLCardsContainerElement: {
         prototype: HTMLCardsContainerElement;
-        new (): HTMLCardsContainerElement;
+        new(): HTMLCardsContainerElement;
     };
     interface HTMLElementTagNameMap {
         "card-component": HTMLCardComponentElement;
@@ -47,9 +47,9 @@ declare namespace LocalJSX {
           * The challenge
          */
         "challenge"?: {
-    title: string,
-    points: number
-  };
+            points: number,
+            title: string
+        };
         /**
           * The day
          */
